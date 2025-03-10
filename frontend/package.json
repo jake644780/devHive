@@ -8,8 +8,7 @@
     "e": "vite build && serve dist",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "push": "git push origin main"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.0.0",
