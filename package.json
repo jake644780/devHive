@@ -1,0 +1,13 @@
+{
+  "name": "devhive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "git push origin main"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
