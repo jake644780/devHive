@@ -1,26 +1,13 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './css/App.css'
+import viteLogo from '/vite.svg';
+import {Navbar} from './navbar/index';
+
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const [likes, setLikes] = useState(10);
-
   return (
     <>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <textarea onInput={()=>setLikes((likes)=> likes - 1)}>
-
-        </textarea>
-        <div>
-          {likes}
-        </div>
-      </div>
+      <Navbar/>
     </>
   )
 }
