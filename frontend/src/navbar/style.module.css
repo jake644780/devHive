@@ -6,3 +6,17 @@
 li{
     list-style: none;  
 }
+
+.navElements{
+    display: flex;
+    flex-direction: row;
+}
+
+.navElement{
+    background-color: aquamarine;
+    box-sizing: border-box;
+}
+
+.navbar{
+    
+}
