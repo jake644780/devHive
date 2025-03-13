@@ -1,0 +1,12 @@
+//[=] things 
+~           space sep, exact
+|           space sep, sub
+^           prefix
+$           suffix
++
+*           substring
+//css scopes
++           first sib
+~           all sib
+>           all first-child
+space       all child
