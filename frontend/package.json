@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "go": "vite build && serve dist",
+    "go!": "start firefox http://localhost:3000 && vite build && serve dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
