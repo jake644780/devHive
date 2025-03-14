@@ -11,6 +11,5 @@ func main() {
 
 	routes.SetupRoutes(g);
 
-
 	g.Run(":8081");
 }
