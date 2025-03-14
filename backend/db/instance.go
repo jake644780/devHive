@@ -1,8 +1,8 @@
 package db
 
 import (
-	"errors"
 	"fmt"
+	"log"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -10,10 +10,12 @@ import (
 	"gorm.io/gorm"
 )
 
-func InitDB() (*gorm.DB, error){
+var Instance *gorm.DB
+
+func InitDB() {
 	err := godotenv.Load()
 	if err != nil{
-		return &gorm.DB{}, errors.New("couldn't read dotenv file");
+		log.Fatal("couldn't load dotenv")
 	}
 
 	user := os.Getenv("DB_USER");
@@ -31,13 +33,12 @@ func InitDB() (*gorm.DB, error){
 
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{});
 	if err != nil{
-		errMSG := fmt.Sprintf("couldn't open db with these:\nusername:\t%s\npassword:\t%s\nhost:\t%s\nport:\t%s\ndb name:\t%s",
+		log.Fatalf("couldn't open db with these:\nusername:\t%s\npassword:\t%s\nhost:\t%s\nport:\t%s\ndb name:\t%s",
 		user,
 		pass,
 		host,
 		port,
 		name);
-		return &gorm.DB{}, errors.New(errMSG);
 	}
-	return db, nil;
+	Instance = db
 }

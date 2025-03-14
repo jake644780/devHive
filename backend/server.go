@@ -21,11 +21,8 @@ func main() {
 	routes.SetupRoutes(g)
 
 
-	db, err := db.InitDB()
-	if err != nil{
-		log.Fatal(err)
-	}
-	log.Printf("%v", db)
+	db.InitDB()
+	log.Printf("%v", db.Instance)
 	
 
 	g.Run(":8081")
