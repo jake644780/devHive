@@ -17,12 +17,13 @@ func main() {
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
+
 	routes.SetupRoutes(g)
 
-	db, err := db.InitDB();
+
+	db, err := db.InitDB()
 	if err != nil{
 		log.Fatal(err)
-		return
 	}
 	log.Printf("%v", db)
 	

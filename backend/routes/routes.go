@@ -8,4 +8,5 @@ func SetupRoutes(r *gin.Engine) {
 			"message": "helo word",
 		});
 	});
+	routes.SetupIdeaRoutes(r)
 }
