@@ -18,12 +18,9 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
-	routes.SetupRoutes(g)
+	routes.SetupAllRoutes(g)
 
-
-	db.InitDB()
-	log.Printf("%v", db.Instance)
-	
+	db.InitDB()	
 
 	g.Run(":8081")
 }
