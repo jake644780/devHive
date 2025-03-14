@@ -1,6 +1,8 @@
 package routes
 
 import (
+	"log"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -11,4 +13,5 @@ func SetupAllRoutes(r *gin.Engine) {
 		});
 	});
 	SetupIdeaRoutes(r)
+	log.Println("routes set up")
 }
