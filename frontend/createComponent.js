@@ -31,15 +31,15 @@ fs.writeFileSync(path.join(componentDir, "index.jsx"), indexContent);
 // Create the component file
 const componentContent = `import styles from "./style.module.css";
 
-const ${componentName} = () => {
-  return <div className={styles.container}>${componentName} Component</div>;
+export default function ${componentName} (){
+    return(
+    <div>${componentName} component<div/>
+    )
 };
-
-export default ${componentName};
 `;
 fs.writeFileSync(path.join(componentDir, `${componentName}.jsx`), componentContent);
 
 // Create the CSS module file
-fs.writeFileSync(path.join(componentDir, "style.module.css"), `.container { /* Add styles here */ }`);
+fs.writeFileSync(path.join(componentDir, "style.module.css"), ``);
 
 console.log(`✅ Component "${componentName}" created successfully in src/components/${componentName}/`);
