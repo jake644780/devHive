@@ -8,6 +8,6 @@ import (
 func SetupIdeaRoutes(r *gin.Engine){
 	r.GET("/ideas", controllers.GetAllIdeas)
 	r.GET("/idea/:id", controllers.GetIdea)
-	r.POST("/ideas/new", controllers.CreateNewIdea)
+	r.POST("/idea/new", controllers.CreateNewIdea)
 	r.DELETE("/idea/:id", controllers.DeleteIdea)
 }

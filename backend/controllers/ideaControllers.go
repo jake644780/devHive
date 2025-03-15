@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"backend/db"
-	"backend/db/models"
+	"backend/models"
 	"github.com/gin-gonic/gin"
 )
 
