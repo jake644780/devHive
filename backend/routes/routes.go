@@ -12,6 +12,7 @@ func SetupAllRoutes(r *gin.Engine) {
 			"message": "helo word",
 		});
 	});
+	log.Println("loaded these routes:")
 	SetupIdeaRoutes(r)
-	log.Println("routes set up")
+	SetupChatbotRoutes(r)
 }

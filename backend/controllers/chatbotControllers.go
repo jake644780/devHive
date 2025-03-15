@@ -13,6 +13,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
+
 func GenerateNewIdeas(ideaList string) (string, error) {
 	err := godotenv.Load()
 	if err != nil{
@@ -97,7 +98,7 @@ func StringifyIdeas(ideas []models.Idea) string{
 
 func GetIdeaFromChatbot(c *gin.Context){
 	// Call the /getAllIdeas route on the Gin server
-	resp, err := http.Get("http://localhost:8080/getAllIdeas")
+	resp, err := http.Get("http://localhost:8081/ideas")
 	if err != nil{
 		c.JSON(500, gin.H{
 			"error": err.Error(),
