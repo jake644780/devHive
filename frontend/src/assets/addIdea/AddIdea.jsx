@@ -1,3 +1,5 @@
 export default function AddIdea(){
-    <h1>add idea</h1>
+    return (
+        <h1>add idea</h1>
+    )
 }
