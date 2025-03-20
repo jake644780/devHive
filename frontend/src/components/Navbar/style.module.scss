@@ -18,6 +18,8 @@
 }
 
 .element{
+    @include respoText;
+
     flex-grow: 1;
     background-color: $azul;
     &:hover{
@@ -38,16 +40,12 @@
     }
 
     
-    font-size: 2vw;
-    @media (max-width: $mid){
-        font-size: 4vw;
-    }
-    @media (max-width: $big){
-        font-size: 3vw;
-    }
 }
 
 
-
+.active{
+    background-color: lighten($azul, 25%);
+    color: darken(white, 25%);
+}
 
 

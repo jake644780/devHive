@@ -1,1 +1,44 @@
 @use '../../global.scss' as *;
+
+
+.container{
+    @include align(column, center, center);
+    @include center(text);
+    @include oneImage;
+
+    width: 100vw;
+    height: 90vh;
+    background-image: url("/go-knit.jpg");
+    color: white; /* Ensure text is readable */
+}
+
+.title{
+    font-style: italic;
+}
+
+.content{
+    @include center(text);
+    @include align(column, center, center);
+    @include respoText(5);
+
+    .title{
+        font-size: inherit;
+    }
+
+    .time{
+        @include respoText(2.1);
+    }
+
+    background-color: rgba($color: $blanco, $alpha: 0.5);
+    border-radius: 5px;
+    width: 60%;
+    height: 60%;
+    *{
+        color: $negro;
+    }
+
+    @media(max-width: $mid){
+        width: 100vw;
+        border-radius: 0;
+    }
+}
