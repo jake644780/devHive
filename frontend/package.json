@@ -10,7 +10,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "component": "node createComponent.js"
+    "component": "node createComponent.js",
+    "new": "start cmd /k npm run go"
   },
   "dependencies": {
     "fs": "^0.0.1-security",

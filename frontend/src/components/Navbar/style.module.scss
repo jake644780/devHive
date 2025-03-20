@@ -1,43 +1,5 @@
-@mixin align($direction: row, $align: center, $justify: center){
-    display: flex;
-    flex-direction: $direction;
-    align-items: $align;
-    justify-content: $justify;
-}
+@use '../../global.scss' as *;
 
-@mixin border{
-    border: solid black 2px
-}
-
-@mixin center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin hundert{
-    width: 100%;
-    height: 100%;
-}
-
-$azul: #002642;
-$amarillo: #e59500;
-$negro: #02040F;
-$rojo: #840032;
-
-$mid: 768px;
-$big: 900px;
-
-
-*{
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-body{
-    margin: 0;
-    padding: 0;
-}
 
 .navbar{
     @include align(row, stretch, space-evenly);

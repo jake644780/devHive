@@ -9,12 +9,13 @@ const __dirname = path.dirname(__filename);
 const argv2 = process.argv[2];
 const componentName = argv2.charAt(0).toUpperCase() + argv2.slice(1).toLowerCase();
 
+
 if (!componentName) {
   console.error("❌ Please provide a component name.");
   process.exit(1);
 }
 
-const componentDir = path.join(__dirname, "src", "assets", "components", componentName);
+const componentDir = path.join(__dirname, "src", "components", componentName);
 
 // Check if the folder already exists
 if (fs.existsSync(componentDir)) {
@@ -41,6 +42,6 @@ export default function ${componentName} (){
 fs.writeFileSync(path.join(componentDir, `${componentName}.jsx`), componentContent);
 
 // Create the CSS module file
-fs.writeFileSync(path.join(componentDir, "style.module.scss"), ``);
+fs.writeFileSync(path.join(componentDir, "style.module.scss"), `@use '../../global.scss' as *;`);
 
 console.log(`✅ Component "${componentName}" created successfully in src/components/${componentName}/`);

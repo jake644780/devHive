@@ -1,0 +1,45 @@
+//mixins
+@mixin align($direction: row, $align: center, $justify: center){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin border{
+    border: solid black 2px
+}
+
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin hundert{
+    width: 100%;
+    height: 100%;
+}
+// colors
+$azul: #002642;
+$amarillo: #e59500;
+$negro: #02040F;
+$rojo: #840032;
+//sizes
+$mid: 768px;
+$big: 900px;
+
+
+//general stykes
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $negro;      
+    color: $amarillo;
+}
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
