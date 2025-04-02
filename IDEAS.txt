@@ -1,5 +1,6 @@
 -name is devHive
 -ai name is ideaBot
+-ai will be used with deepseek and python
 -project ideas CRUD
 -ai assistant
 -built with gin and react(better than vue)
