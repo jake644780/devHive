@@ -14,8 +14,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @if $text == text{
-        text-align: center;
+    
+    @if $text != null{
+        text-align: $text;
     }
 }
 

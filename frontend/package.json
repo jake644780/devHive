@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "component": "node createComponent.js",
-    "new": "start cmd /k npm run go"
+    "new": "start cmd /k npm run go",
+    "new!": "start firefox http://localhost:3000 && start cmd /k npm run go"
   },
   "dependencies": {
     "fs": "^0.0.1-security",

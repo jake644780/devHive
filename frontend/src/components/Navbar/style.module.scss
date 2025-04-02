@@ -1,5 +1,5 @@
 @use '../../global.scss' as *;
-
+@use 'sass:color';
 
 .navbar{
     @include align(row, stretch, space-evenly);
@@ -7,19 +7,16 @@
     
     height: 10vh;
     width: 100vw;
-
     @media (max-width: $mid){
-        height: 5vw;
+        height: 4vw;
     }
     @media (max-width: $big){
-        font-size: 3vw;
+        height: 3vw;
     }
 
 }
 
 .element{
-    @include respoText;
-
     flex-grow: 1;
     background-color: $azul;
     &:hover{
@@ -33,19 +30,17 @@
         @include center;
         @include hundert;
         font-size: inherit;
-        color: white;
+        color: $blanco;
         text-decoration: none;
         transition: 0.3s color ease, 0.3s background ease;
         padding: 1vw;
     }
 
-    
+    @include respoText;
 }
-
 
 .active{
-    background-color: lighten($azul, 25%);
-    color: darken(white, 25%);
+    background-color: color.scale($azul, $lightness: 25%);
+    color: color.scale($blanco, $lightness: -25%);
 }
-
 
