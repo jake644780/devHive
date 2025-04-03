@@ -22,5 +22,5 @@ func main() {
 
 	db.InitDB()	
 
-	g.Run(":8081")
+	g.Run(":8080")
 }

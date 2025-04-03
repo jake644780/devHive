@@ -8,7 +8,7 @@ import (
 func SetupAllRoutes(r *gin.Engine) {
 	r.GET("/", func(c *gin.Context){
 		c.JSON(200, gin.H{
-			"message": "helo word",
+			"message": "dis is the backend, go to port 3000 for the frontend",
 		});
 	});
 	SetupIdeaRoutes(r)

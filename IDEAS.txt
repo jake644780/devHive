@@ -4,3 +4,13 @@
 -project ideas CRUD
 -ai assistant
 -built with gin and react(better than vue)
+
+PORTS:
+go:
+8080+n
+node:
+8000+n
+python:
+5000+n
+frontend:
+3000+n
